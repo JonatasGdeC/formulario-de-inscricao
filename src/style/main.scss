@@ -1,3 +1,141 @@
+@use 'variaveis';
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: variaveis.$fontePrincipal;
+}
+
 body{
-    background-color: blue;
+    background-color: variaveis.$corDeFundo;
+    color: variaveis.$corPrincipal
+}
+
+.container{
+    background-color: variaveis.$corContainer;
+    max-width: 928px;
+    max-height: 641px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 36px;
+}
+
+.content-form{
+    padding: 74px 64px 73px 44px;
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 40px;
+        
+        &__title{
+            font-size: 56px;
+            font-weight: bold;
+        }
+    
+        &__text{
+            line-height: 24px;
+        }
+    
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            list-style: none;
+
+            &__item{
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+    }
+
+    .form{
+        display: flex;
+        flex-direction: column;
+
+        &__label{
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        &__input{
+            height: 56px;
+            border: 1px solid #19182B40;
+            border-radius:8px;
+            padding: 8px 24px;
+            font-size: 16px;
+            margin: 8px 0 24px;
+            cursor: pointer;
+
+            &::placeholder{
+                font-size: 16px;
+            }
+        }
+
+        &__button{
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            color: variaveis.$corContainer;
+            background-color: variaveis.$corPrincipal;
+            cursor: pointer;
+            transition: all ease .5s;
+
+            &:hover{
+                box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+                background: variaveis.$corHoverBotao;
+                scale: 1.03;
+            }
+        }
+    }
+
+    .before-input{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.image{
+    position: relative;
+    &__rectangle{
+        border-radius: 16px;
+    }
+
+    &__computer{
+        position: absolute;
+        top: 139px;
+        right: 0;
+    }
+
+    &__tablet{
+        position: absolute;
+        top: 210px;
+        left: 0px;
+    }
+
+    &__statistics{
+        position: absolute;
+        top:117px;
+        left: 246px;
+    }
+
+    &__number{
+        position: absolute;
+        top: 263px;
+        right: 0;
+    }
+}
+
+.mensagem-error{
+    font-size: 12px;
+    font-weight: bold;
+    color: variaveis.$corMensagemErro;
+    display: none;
 }

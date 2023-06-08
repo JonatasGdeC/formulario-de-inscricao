@@ -6,8 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
     <link rel="stylesheet" href="./dist/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <section class="container">
+        <div class="content-form">
+            <div class="content">
+                <h1 class="content__title">Stay updated!</h1>
+                <p class="content__text">Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="content__list">
+                    <li class="content__list__item">
+                        <img src="./dist/img/check.svg" alt="check">
+                        Product discovery and building what matters
+                    </li>
+                    <li class="content__list__item">
+                        <img src="./dist/img/check.svg" alt="check">
+                        Measuring to ensure updates are a success
+                    </li>
+                    <li class="content__list__item">
+                        <img src="./dist/img/check.svg" alt="check">
+                        And much more!
+                    </li>
+                </ul>
+            </div>
+            <form class="form">
+                <div class="before-input">
+                    <label for="email" class="form__label">Email address</label>
+                    <p class="mensagem-error">Valid email required</p>
+                </div>
+                <input type="email" class="form__input" placeholder="email@company.com" required>
+                <button type="submit" class="form__button">Subscribe to monthly newsletter</button>
+            </form>
+        </div>
+        <div class="image">
+            <img class="image__rectangle" src="./dist/img/Rectangle.svg" alt="Rectangle">
+            <img class="image__tablet" src="./dist/img/image2.svg" alt="Tablet">
+            <img class="image__computer" src="./dist/img/image1.svg" alt="Computer">
+            <img class="image__statistics" src="./dist/img/image3.svg" alt="Statistics">
+            <img class="image__number" src="./dist/img/image4.svg" alt="number">
+        </div>
+    </section>
 </body>
 </html>
