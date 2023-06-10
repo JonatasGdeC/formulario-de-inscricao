@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="container">
+    <section class="container container--page-main">
         <div class="content-form">
             <div class="content">
                 <h1 class="content__title">Stay updated!</h1>
@@ -34,10 +34,10 @@
             <form class="form">
                 <div class="before-input">
                     <label for="email" class="form__label">Email address</label>
-                    <p class="mensagem-error">Valid email required</p>
+                    <span class="mensagem-error">Valid email required</span>
                 </div>
-                <input type="email" class="form__input" placeholder="email@company.com" required>
-                <button type="submit" class="form__button">Subscribe to monthly newsletter</button>
+                <input type="email" class="form__input" placeholder="email@company.com" name="email">
+                <button type="submit" class="form__button" id="enviar">Subscribe to monthly newsletter</button>
             </form>
         </div>
         <div class="image">
@@ -48,5 +48,18 @@
             <img class="image__number" src="./dist/img/image4.svg" alt="number">
         </div>
     </section>
+
+    <section class="container container--page-thanks">
+        <img src="./dist/img/check.svg" alt="Check">
+        <div class="content content--page-thanks">
+            <h2 class="content__title">Thanks for subscribing!</h2>
+            <p class="content__text">A confirmation email has been sent to <b><span id="email-digit">ash@loremcompany.com</span></b>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+            <button class="form__button form__button--page-thanks" id="dismiss">Dismiss message</button>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./dist/scripts/jquery.validate.min.js"></script>
+    <script src="./dist/scripts/main.js"></script>
 </body>
 </html>
