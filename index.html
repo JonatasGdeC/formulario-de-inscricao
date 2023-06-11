@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="shortcut icon" href="./dist/img/check.svg">
     <link rel="stylesheet" href="./dist/style/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +42,27 @@
             </form>
         </div>
         <div class="image">
-            <img class="image__rectangle" src="./dist/img/Rectangle.svg" alt="Rectangle">
-            <img class="image__tablet" src="./dist/img/image2.svg" alt="Tablet">
-            <img class="image__computer" src="./dist/img/image1.svg" alt="Computer">
-            <img class="image__statistics" src="./dist/img/image3.svg" alt="Statistics">
-            <img class="image__number" src="./dist/img/image4.svg" alt="number">
+            <picture>
+                <source class="image__rectangle" media="(max-width: 768px)" srcset="./dist/img/mobile-rectangle.svg">
+                <img class="image__rectangle" src="./dist/img/desktop-rectangle.svg" alt="Rectangle">
+            </picture>
+            <picture>
+                <source class="image__tablet" media="(max-width: 768px)" srcset="./dist/img/mobile-tablet.svg">
+                <img class="image__tablet" src="./dist/img/desktop-tablet.svg" alt="Tablet">
+            </picture>
+            <picture>
+                <source  class="image__computer" media="(max-width: 768px)" srcset="./dist/img/mobile-computer.svg">
+                <img class="image__computer" src="./dist/img/desktop-computer.svg" alt="Computer">
+            </picture>
+            <picture>
+                <source class="image__statistics" media="(max-width: 768px)" srcset="./dist/img/mobile-statistics.svg">
+                <img class="image__statistics" src="./dist/img/desktop-statistics.svg" alt="Statistics">
+            </picture>
+            <picture>
+                <source class="image__number" media="(max-width: 768px)" srcset="./dist/img/mobile-number.svg">
+                <img class="image__number" src="./dist/img/desktop-number.svg" alt="Number">
+            </picture>
+            
         </div>
     </section>
 
@@ -59,7 +76,6 @@
     </section>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="./dist/scripts/jquery.validate.min.js"></script>
     <script src="./dist/scripts/main.js"></script>
 </body>
 </html>

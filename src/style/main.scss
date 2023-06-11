@@ -32,6 +32,13 @@ body{
         padding: 24px;
         display: flex;
         justify-content: space-between;
+
+        @media(max-width:768px){
+            max-height:100vh;
+            max-width: auto;
+            flex-direction: column-reverse;
+            padding: 0;
+        }
     }
 
     &--page-thanks{
@@ -44,11 +51,21 @@ body{
             width: 64px;
             height: 64px;
         }
+
+        @media(max-width:768px){
+            max-height:100vh;
+            max-width: auto;
+            padding: 150px 24px 40px;
+        }
     }
 }
 
 .content-form{
     padding: 74px 64px 73px 44px;
+
+    @media(max-width: 902px){
+        padding: 40px 24px;
+    }
 }
 .content{
     display: flex;
@@ -58,6 +75,10 @@ body{
     &__title{
         font-size: 56px;
         font-weight: bold;
+
+        @media(max-width: 770px){
+            font-size: 40px;
+        }
     }
 
     &__text{
@@ -101,6 +122,11 @@ body{
         margin: 8px 0 24px;
         cursor: pointer;
         background-color: none;
+
+        &:focus{
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
         
         &--is-erro{
             border-color: #FF6155;
@@ -145,32 +171,55 @@ body{
 
 .image{
     position: relative;
+
     &__rectangle{
         border-radius: 16px;
+
+        @media (max-width: 768px){
+            width: 100%;
+        }
     }
 
     &__computer{
         @include images();
         top: 139px;
         right: 0;
+
+        @media (max-width: 768px){
+            top: 35px;
+        }
     }
 
     &__tablet{
         @include images();
         top: 210px;
         left: 0px;
+
+        @media (max-width: 768px){
+            top: 95px;
+        }
     }
 
     &__statistics{
         @include images();
         top:117px;
         left: 246px;
+
+        @media (max-width: 768px){
+            top: 24px;
+            left: 220px;
+        }
     }
 
     &__number{
         @include images();
         top: 263px;
         right: 0;
+
+        @media (max-width: 768px){
+            top: 102px;
+            right: 58px;
+        }
     }
 }
 
@@ -178,5 +227,9 @@ body{
     font-size: 12px;
     font-weight: bold;
     color: variaveis.$corMensagemErro;
+    display: none;
+}
+
+#image-rigth{
     display: none;
 }

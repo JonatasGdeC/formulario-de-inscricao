@@ -1,8 +1,12 @@
 $(document).ready(function(){
-    $('.image__tablet').slideDown(600);
-    $('.image__computer').slideDown(1000);
-    $('.image__statistics').slideDown(1020);
-    $('.image__number').slideDown(1020);
+    function showImages(){
+        $('.image__tablet').slideDown(600);
+        $('.image__computer').slideDown(1000);
+        $('.image__statistics').slideDown(1000);
+        $('.image__number').slideDown(1000);
+    }
+
+    showImages();
 
     $('#enviar').click(function(){
 		$("form").submit(function () { return false; });
@@ -19,6 +23,10 @@ $(document).ready(function(){
 		}else{
             mensagemErro.css({display:'none'});
             input.removeClass('form__input--is-erro');
+            $('.image__tablet').slideUp(400);
+            $('.image__computer').slideUp(400);
+            $('.image__statistics').slideUp(400);
+            $('.image__number').slideUp(400);
 			$('.container--page-main').slideUp(600);
 
             input.keyup(function(e){
@@ -32,7 +40,7 @@ $(document).ready(function(){
     $('#dismiss').click(function(){
         $('.container--page-thanks').slideUp(600);
         $('.container--page-main').slideDown(800);
-
+        showImages();
         $('input').val('')
     })
 })
